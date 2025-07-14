@@ -23,9 +23,9 @@ COLUMN_RENAMES = {
     'OWNER_1_LAST': 'LAST NAME',
     'OWNER_ADDRESS': 'ADDRESS',
     'OWNER_CITY': 'CITY',
-    'OWNER_STATE': 'STATE',
+    'OWNER_STATE': 'OWNER STATE',
     'OWNER_ZIP': 'ZIP/POSTAL CODE',
-    'SITE_STATE': 'STATE'
+    'SITE_STATE': 'SITE STATE'
 }
 
 # Company keywords to filter out
@@ -250,4 +250,3 @@ else:
     
     **All operations are fully automated** - just enter codes, upload files, and download!
     """)
-    

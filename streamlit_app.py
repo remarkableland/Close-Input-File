@@ -29,7 +29,7 @@ COLUMN_RENAMES = {
 }
 
 # Company keywords to filter out
-COMPANY_KEYWORDS = [' llc', ' corp', ' ltd', ' assoc', ' company', ' lp', 'partnership']
+COMPANY_KEYWORDS = [' llc', ' corp', ' ltd', ' assoc', ' company', ' lp', 'partnership', ' inc']
 
 def apply_title_case(df):
     """Apply title case to all text columns except state columns"""

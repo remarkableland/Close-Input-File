@@ -38,11 +38,11 @@ def apply_title_case(df):
     for col in df.columns:
         if df[col].dtype == 'object':  # Text columns
             if col in state_columns:
-                # Convert state columns to ALL CAPS
-                df[col] = df[col].astype(str).str.upper()
+                # Convert state columns to ALL CAPS, but preserve NaN values
+                df[col] = df[col].str.upper()
             else:
-                # Apply title case to other text columns
-                df[col] = df[col].astype(str).str.title()
+                # Apply title case to other text columns, but preserve NaN values
+                df[col] = df[col].str.title()
     
     return df
 

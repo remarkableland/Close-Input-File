@@ -23,9 +23,9 @@ COLUMN_RENAMES = {
     'OWNER_1_LAST': 'LAST NAME',
     'OWNER_ADDRESS': 'ADDRESS',
     'OWNER_CITY': 'CITY',
-    'OWNER_STATE': 'OWNER STATE',
+    'OWNER_STATE': 'address_1_state',
     'OWNER_ZIP': 'ZIP/POSTAL CODE',
-    'SITE_STATE': 'SITE STATE'
+    'SITE_STATE': 'custom.State'
 }
 
 # Company keywords to filter out
@@ -33,7 +33,7 @@ COMPANY_KEYWORDS = [' llc', ' corp', ' ltd', ' assoc', ' company', ' lp', 'partn
 
 def apply_title_case(df):
     """Apply title case to all text columns except state columns"""
-    state_columns = ['PROP_STATE', 'SITE_STATE', 'OWNER_STATE']
+    state_columns = ['PROP_STATE', 'SITE_STATE', 'OWNER_STATE', 'address_1_state', 'custom.State']
     
     for col in df.columns:
         if df[col].dtype == 'object':  # Text columns
@@ -185,8 +185,9 @@ if uploaded_files and len(uploaded_files) >= 1 and code1 and code2:
         # Download section
         st.subheader("📥 Download Processed File")
         
-        # File naming
-        default_name = "processed_property_data.csv"
+        # File naming with date/time
+        current_time = datetime.now().strftime("%Y%m%d_%H%M%S")
+        default_name = f"processed_property_data_{current_time}.csv"
         filename = st.text_input("Output filename:", value=default_name)
         if not filename.endswith('.csv'):
             filename += '.csv'
@@ -248,5 +249,4 @@ else:
     8. **Rename headers** (8 specific column name changes)
     9. **Mail_CallRail alternation** between your two custom codes
     
-    **All operations are fully automated** - just enter codes, upload files, and download!
-    """)
+    **All operations are fully automated** - just enter codes, upload files, and wnloa

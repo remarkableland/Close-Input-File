@@ -244,10 +244,11 @@ else:
     3. **Add** 3 new columns (Mail_CallRail with alternating codes, Lead_Type, Mail_Type)
     4. **Deduplicate** based on AGGR_GROUP column
     5. **Proper capitalization** (Title Case + ALL CAPS for states)
-    6. **Filter companies** (remove LLC, Corp, Ltd, etc.)
+    6. **Filter companies** (remove LLC, Corp, Ltd, Inc, etc.)
     7. **Filter recent transactions** (remove last 10 years)
     8. **Rename headers** (8 specific column name changes)
     9. **Mail_CallRail alternation** between your two custom codes
     
     **All operations are fully automated** - just enter codes, upload files, and download!
     """)
+    

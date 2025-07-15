@@ -249,4 +249,5 @@ else:
     8. **Rename headers** (8 specific column name changes)
     9. **Mail_CallRail alternation** between your two custom codes
     
-    **All operations are fully automated** - just enter codes, upload files, and wnloa
+    **All operations are fully automated** - just enter codes, upload files, and download!
+    """)
